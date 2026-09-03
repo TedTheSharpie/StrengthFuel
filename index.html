@@ -1,107 +1,23 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <meta name="theme-color" content="#111827" />
+  <meta name="theme-color" content="#07110d" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="StrengthFuel" />
+  <meta name="description" content="Meal planning and nutrition tracking for strength training." />
+  <link rel="manifest" href="./manifest.webmanifest" />
+  <link rel="icon" href="./icon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="./icon.svg" />
+  <link rel="stylesheet" href="./styles.css" />
+  <link rel="stylesheet" href="./training.css" />
   <title>StrengthFuel</title>
-  <link rel="manifest" href="manifest.json" />
-  <link rel="apple-touch-icon" href="icon.svg" />
-  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <main class="app-shell">
-    <header class="hero">
-      <div>
-        <p class="eyebrow">StrengthFuel</p>
-        <h1>Build strength. Eat smarter.</h1>
-        <p class="sub">Simple meals, macros, shopping and progress tracking built for your recomposition goal.</p>
-      </div>
-      <button id="resetBtn" class="ghost">Reset</button>
-    </header>
-
-    <section class="card targets">
-      <div><span>Calories</span><strong>2800</strong><small>kcal/day</small></div>
-      <div><span>Protein</span><strong>200</strong><small>g/day</small></div>
-      <div><span>Creatine</span><strong>5</strong><small>g/day</small></div>
-    </section>
-
-    <nav class="tabs" aria-label="Main navigation">
-      <button class="tab active" data-tab="today">Today</button>
-      <button class="tab" data-tab="meals">Meals</button>
-      <button class="tab" data-tab="week">Week</button>
-      <button class="tab" data-tab="shopping">Shopping</button>
-      <button class="tab" data-tab="progress">Progress</button>
-    </nav>
-
-    <section id="today" class="panel active">
-      <div class="card">
-        <h2>Today</h2>
-        <div class="progress-wrap">
-          <div class="progress-row"><span>Calories</span><span id="calText">0 / 2800</span></div>
-          <div class="bar"><div id="calBar"></div></div>
-          <div class="progress-row"><span>Protein</span><span id="proteinText">0 / 200 g</span></div>
-          <div class="bar"><div id="proteinBar"></div></div>
-        </div>
-      </div>
-
-      <div class="card quick-actions">
-        <h2>Daily habits</h2>
-        <label class="checkline"><input id="creatineCheck" type="checkbox" /> Took 5 g creatine</label>
-        <label class="checkline"><input id="shakeCheck" type="checkbox" /> Protein shake</label>
-      </div>
-
-      <div class="card">
-        <div class="section-head"><h2>Logged meals</h2><button id="clearMeals" class="text-btn">Clear</button></div>
-        <div id="loggedMeals" class="stack empty-state">No meals logged yet.</div>
-      </div>
-    </section>
-
-    <section id="meals" class="panel">
-      <div class="card">
-        <div class="section-head"><h2>Meal library</h2><span class="pill">Norwegian grocery friendly</span></div>
-        <div id="mealList" class="stack"></div>
-      </div>
-    </section>
-
-    <section id="week" class="panel">
-      <div class="card">
-        <h2>7-day plan</h2>
-        <div id="weekPlan" class="stack"></div>
-      </div>
-    </section>
-
-    <section id="shopping" class="panel">
-      <div class="card">
-        <div class="section-head"><h2>Shopping list</h2><button id="resetShopping" class="text-btn">Untick all</button></div>
-        <p class="muted">Tap items as you put them in your basket.</p>
-        <div id="shoppingList" class="stack"></div>
-      </div>
-    </section>
-
-    <section id="progress" class="panel">
-      <div class="card">
-        <h2>Progress check-in</h2>
-        <div class="grid-2">
-          <label>Weight (kg)<input id="weightInput" type="number" step="0.1" placeholder="105.0" /></label>
-          <label>Waist (cm)<input id="waistInput" type="number" step="0.1" placeholder="e.g. 100" /></label>
-        </div>
-        <button id="saveProgress" class="primary">Save check-in</button>
-      </div>
-      <div class="card">
-        <h2>History</h2>
-        <div id="progressHistory" class="stack empty-state">No check-ins yet.</div>
-      </div>
-    </section>
-  </main>
-
-  <dialog id="mealDialog">
-    <div class="dialog-card">
-      <button id="closeDialog" class="dialog-close" aria-label="Close">×</button>
-      <div id="dialogContent"></div>
-    </div>
-  </dialog>
-
-  <script src="app.js"></script>
+  <div id="app"></div>
+  <div id="toast" role="status" aria-live="polite"></div>
+  <script src="./app.js" defer></script>
 </body>
 </html>

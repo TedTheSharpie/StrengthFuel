@@ -1,0 +1,12 @@
+{
+  "name": "StrengthFuel",
+  "short_name": "StrengthFuel",
+  "description": "Meal planning and nutrition tracking for strength training.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#07110d",
+  "theme_color": "#07110d",
+  "orientation": "portrait-primary",
+  "icons": [{"src":"./icon.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}]
+}
