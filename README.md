@@ -19,6 +19,9 @@ The app stores all logs, plans, check-ins and settings locally in the browser. C
 - Create workouts for any day and add your own exercise list.
 - Log sets, reps and working weight after each session.
 - Review recent sessions and the best recorded weight for every exercise.
+- Keep the shopping list intentional: it only contains manually entered items and ingredients from meals you explicitly add.
+- Create personal meals with macros, ingredients and cooking instructions; custom meals work in the food plan and shopping list.
+- Scan EAN/UPC grocery barcodes or enter them manually to look up calories and protein through Open Food Facts.
 
 ## Files
 
